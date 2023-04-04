@@ -1,0 +1,140 @@
+.calc_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#example_react_calc {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  border: solid thin #ccc;
+  background-color: white;
+}
+
+#example_react_calc div {
+  width: 100%;
+}
+
+#example_react_calc .calc {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 281px;
+  margin-bottom: 0;
+  opacity: 0.97;
+  background-color: #424654;
+}
+
+#example_react_calc .filter {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+#example_react_calc button {
+  min-width: 15%;
+  max-width: 50px;
+  height: 40px;
+  margin: 10px;
+  color: white;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+}
+
+#example_react_calc .calc > div button {
+  font-size: 1rem;
+}
+
+#example_react_calc button:hover {
+  cursor: pointer;
+}
+
+#example_react_calc .pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 330px;
+}
+
+#example_react_calc .display {
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  text-align: right;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+#example_react_calc .result {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+}
+
+#example_react_calc .dec {
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+#example_react_calc .return {
+  z-index: 1;
+  width: 100%;
+  max-width: 280px;
+  height: 60px;
+  margin: 0;
+  border: solid thin #999;
+  background-color: #f28a4f;
+  font-size: 30px;
+}
+
+#example_react_calc .lastrow {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 50px;
+}
+
+#example_react_calc h1 {
+  color: white;
+  font-family: roboto, sans-serif;
+}
+
+#example_react_calc .footer {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-family: roboto, sans-serif;
+}
+
+#example_react_calc .afterpad {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 330px;
+  padding: 0 1rem;
+  background-color: blue;
+  background-color: #424654;
+  box-shadow: 4px 4px 10px -2px #000;
+}

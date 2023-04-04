@@ -1,0 +1,10 @@
+/* make metrics with class .metric-value  centered */
+.blockcomponentmetric-tableau {
+  text-align: center;
+  margin-bottom: 1em;
+}
+/*add some space between radio button and lable and verically between lines */
+input {
+  margin-bottom: .5em;
+  margin-right: .5em;
+}

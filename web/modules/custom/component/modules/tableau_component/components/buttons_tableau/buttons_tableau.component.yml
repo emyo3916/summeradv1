@@ -1,0 +1,20 @@
+name: Reset Button
+description: 'A button that reverts the sheet to the state it was published.'
+template: index.htm
+enable_field: true
+js:
+  component/viz_tableau/viz_tableau.js: {}
+css:
+  component/viz_tableau/viz_tableau.css: {}
+dependencies:
+  - component/viz_tableau_lib
+cache:
+  max-age: 60
+
+form_configuration:
+  buttontext:
+    type: textfield
+    title: 'Button Text'
+    default_value: 'My Button Text'
+
+  

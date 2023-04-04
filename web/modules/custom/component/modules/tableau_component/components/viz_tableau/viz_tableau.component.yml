@@ -1,0 +1,31 @@
+name: Tableau Sheet Viz
+description: 'Componenet to hold Tableau data viz and data table'
+template: index.htm
+enable_field: true
+js:
+  viz_tableau.js: {}
+css:
+  viz_tableau.css: {}
+dependencies:
+  - component/viz_tableau_lib
+cache:
+  max-age: 60
+
+form_configuration:
+  vizname:
+    type: textfield
+    title: "Unique name I can use for data table"
+    default_value: 'uniquevizid'
+  vizdescription:
+    type: textfield
+    title: "Short description to caption data table"
+  vizurl:
+    type: textfield
+    title: "Tableau share link"
+    default_value: 'https://viz-public.cu.edu/t/Boulder/views/AccessibilityExperiments/CUBelongingSB'
+  skipcols:
+    type: textfield
+    title: "Columns to exclude (comma list - blank for all)"
+  tableheaders:
+    type: textfield
+    title: "Table headers for visible columns (comma list - blank for default fieldnames)"

@@ -1,0 +1,40 @@
+name: Metric
+description: 'Component to specify Tableau single number metrics'
+template: index.htm
+enable_field: true
+js:
+  component/viz_tableau/viz_tableau.js: {}
+css:
+  component/viz_tableau/viz_tableau.css: {}
+dependencies:
+  - component/viz_tableau_lib
+cache:
+  max-age: 60
+
+form_configuration:
+  vizname:
+    type: textfield
+    title: 'Internal unique (to other metrics on page) name'
+    default_value: 'unique metric name'
+  metrictitle:
+    type: textfield
+    title: "Text to display above metric"
+  vizurl:
+    type: textfield
+    title: 'Tableau share link'
+    default_value: 'https://viz-public.cu.edu/t/Boulder/views/HistoricalEnrollmentSince1877/TotalStudents'
+  metrictype:
+    type: select
+    title: "Metric Type for Formatting"
+    options:
+      'string': 'string'
+      'integer': 'integer'
+      'decimal2': 'float (2 decimal places)'
+      'percent': 'percentage'
+      'currency' : 'currency'
+      'date' : 'date'
+  column:
+    type: textfield
+    title: "The column in the summary data table that contains the metric"
+    default_value: '1'
+    

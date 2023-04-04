@@ -1,0 +1,91 @@
+:root {
+  --grey-600: #222;
+  --grey-700: #181818;
+  --grey-800: #151515;
+  --grey-900: #0f0f0f;
+  --grey-000: #fff;
+  --grey-100: #d1d1d1;
+  --grey-200: #bababa;
+  --red-500: #d93636;
+  --standard-curve: cubic-bezier(0.4, 0, 0.2, 1);
+  --deceleration-curve: cubic-bezier(0, 0, 0.2, 1);
+  --acceleration-curve: cubic-bezier(0.4, 0, 1, 1);
+  --sharp-curve: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.example_tabs {
+  box-sizing: border-box;
+  padding: 2em 0;
+}
+
+.example_tabs li {
+  list-style: none;
+}
+
+.example_tabs a {
+  display: block;
+  margin-top: 1em;
+}
+
+/* TAB STYLE */
+.example_tabs tab-container {
+  display: flex;
+  flex-direction: column;
+}
+.example_tabs tab-header {
+  display: flex;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.example_tabs tab-header-item {
+  position: relative;
+  min-width: 8em;
+  padding: 6px 8px 6px;
+  text-align: center;
+}
+.example_tabs tab-header-item::before,
+.example_tabs tab-header-item::after {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  transition: transform 0.2s cubic-bezier(1, 0.6, 0, 1);
+  border: 0 solid var(--grey-900);
+}
+.example_tabs tab-header-item::before {
+  bottom: 2px;
+  transform: translateY(100%);
+  border-width: 2px 0 0;
+}
+.example_tabs tab-header-item::after {
+  right: -1px;
+  left: -1px;
+  transform: scaleY(0);
+  transform-origin: center bottom;
+  border-width: 0 2px;
+}
+.example_tabs tab-header-item.tab-active::before {
+  transition-timing-function: cubic-bezier(1, 0.6, 0, 1.22);
+  transform: translateY(0);
+}
+.example_tabs tab-header-item.tab-active::after {
+  transition-timing-function: cubic-bezier(1, 0.6, 0, 1.22);
+  transform: scaleY(1);
+}
+.example_tabs tab-body {
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+  flex: 1;
+  flex-flow: row warp;
+  width: 100%;
+}
+.example_tabs tab-body-item {
+  min-width: 100%;
+  transition: transform 0.2s cubic-bezier(1, 0.6, 0, 1);
+}

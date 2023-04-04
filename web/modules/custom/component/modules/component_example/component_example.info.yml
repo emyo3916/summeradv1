@@ -1,0 +1,12 @@
+name: Component example
+type: module
+description: 'An example module with some sample components for reference.'
+package: Component
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - component:component
+
+# Information added by Drupal.org packaging script on 2022-11-25
+version: '1.0.0-rc4'
+project: 'component'
+datestamp: 1669395941

@@ -1,0 +1,40 @@
+name: Filter
+description: 'Component to specify Tableau filters and parameters'
+template: index.htm
+enable_field: true
+js:
+  component/viz_tableau/viz_tableau.js: {}
+css:
+  component/viz_tableau/viz_tableau.css: {}
+dependencies:
+  - component/viz_tableau_lib
+cache:
+  max-age: 60
+
+form_configuration:
+  paramfilter:
+    type: select
+    title: "Filter or Parameter"
+    options:
+      'filter' : 'filter'
+      'parameter' : 'parameter'
+  displaytitle:
+    type: textfield
+    title: 'Filter Display Title'
+    default_value: 'My Filter Title'
+  internalname:
+    type: textfield
+    title: 'Tableau Filter Field Name'
+    default_value: 'CU Role'
+  controltype:
+    type: select
+    title: "Filter Type"
+    options:
+      'radio' : 'radio'
+      'checkbox' : 'checkbox'
+      'dropdown' : 'dropdown'
+  filtervalues:
+    type: textfield
+    title: 'Filter values (comma separated)'
+    default_value: 'Faculty, Staff, Grad Student, Undergraduate Student'
+  
